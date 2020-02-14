@@ -2,6 +2,17 @@ console.log('padLefts script has loaded');
 
 // write this function!
 function padLeft(string, length) {
+  let text='';
+  if (string.length>=length){
+    text= string;
+  }
+  else {
+    for (i=0;i<(length-string.length);i++){
+      text= text + '-';
+    }
+  text= text + string;
+  }
+ return text; 
 }
 
 // if the string is already as long as or longer than the length
@@ -27,6 +38,8 @@ function padLeftHandler() {
   // perform core logic
   // write this line!
 
+  let result = padLeft(userString, userLengthStr);
+  alert(result);
   // alert result for the user
   // write this line!
 
